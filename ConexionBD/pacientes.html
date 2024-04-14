@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Pacientes</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/pacientes.js"></script>
+    <script type="text/javascript" src="js/cerrarSesion.js"></script>
+    <script type="text/javascript" src="js/funcionesAjax.js"></script>
+</head>
+<body class="cuerpo">
+    <nav class="navbar navbar-expand-lg menu-inicio">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Regresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pacientes.html">Alta Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Lista_3.html">Lista de Pacientes</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col col-md-8 fondo-blanco" id="formulario">
+                <br>
+                <h2 class="text-center">Insertar Nuevo Paciente</h2>
+                <br>
+                <form id="formularioPaciente" class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Nombre:</span>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        <div class="invalid-feedback">Por favor, ingrese el nombre del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Primer Apellido:</span>
+                        <input type="text" class="form-control" id="primerApellido" name="primerApellido" required>
+                        <div class="invalid-feedback">Por favor, ingrese el primer apellido del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Segundo Apellido:</span>
+                        <input type="text" class="form-control" id="segundoApellido" name="segundoApellido" required>
+                        <div class="invalid-feedback">Por favor, ingrese el segundo apellido del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Peso:</span>
+                        <input type="number" class="form-control" id="peso" name="peso" required>
+                        <div class="invalid-feedback">Por favor, ingrese el peso del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Altura:</span>
+                        <input type="number" class="form-control" id="altura" name="altura" required>
+                        <div class="invalid-feedback">Por favor, ingrese la altura del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Fecha de Nacimiento:</span>
+                        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+                        <div class="invalid-feedback">Por favor, ingrese la fecha de nacimiento del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Género:</span>
+                        <select class="form-select" id="genero" name="genero" required>
+                            <option value="">Seleccione un género</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <div class="invalid-feedback">Por favor, seleccione el género del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Dirección:</span>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                        <div class="invalid-feedback">Por favor, ingresa la dirección del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Número de Teléfono:</span>
+                        <input type="number" class="form-control" id="numTelefono" name="numTelefono" required>
+                        <div class="invalid-feedback">Por favor, ingrese el número de teléfono del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Correo Electrónico:</span>
+                        <input type="email" class="form-control" id="correo" name="correo" required>
+                        <div class="invalid-feedback">Por favor, ingrese el correo del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Tipo de Sangre:</span>
+                        <input type="text" class="form-control" id="tipoSangre" name="tipoSangre" required>
+                        <div class="invalid-feedback">Por favor, ingrese el tipo de sangre del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Sexo:</span>
+                        <select class="form-select" id="sexo" name="sexo" required>
+                            <option value="">Seleccione el sexo</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                        <div class="invalid-feedback">Por favor, seleccione el sexo del paciente.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="submit" class="btn btn-success" value="Enviar" id="btnCrearPaciente">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-12 center " id="cargando" style="display: none;">
+        <br>
+        <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="Cargando..."  style="max-width: 90px;">
+        <h1>Cargando...</h1>
+    </div>
+    <div class="col col-md-12 center " id="datos" style="display: none;">
+        <h1>¡Paciente creado correctamente!</h1>
+    </div>
+    <div class="fixed-bottom-right">
+    <button type="button" class="btn btn-outline-warning" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

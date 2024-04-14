@@ -1,0 +1,22 @@
+<script type="text/x-handlebars-template" id="usuarios">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID Usuario</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Nivel</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{idUsuario}}</td>
+                <td>{{usuario}}</td>
+                <td>{{nivel}}</td>
+                <td>{{#if estado}}Activo{{else}}Inactivo{{/if}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<title>INICIO DE SESION</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/handlebars.js"></script>
+		<script type="text/javascript" src="js/master (1).js"></script>
+		<script type="text/javascript" src="js/funcionesAjax.js"></script>
+		<script src="https://kit.fontawesome.com/e9807e02ba.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="cuerpo">
+		<div>
+			<div class="container-fluid">
+				<br>
+				<br>
+				<div class="row justify-content-md-center">
+					<div class="col col-md-6 fondo-blanco" id="formulario">
+						<br>
+						<img class="rounded mx-auto d-block" src="img/logo_unicaribe.png">
+						<br>
+						<h2 class="text-center">Iniciar Sesión</h2>
+						<br>
+						<form>
+							<div class="input-group mb-3">
+								<span class="input-group-text"> <i class="fa-solid fa-user"> </i>&nbsp;Usuario: </span>
+								<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="user" name="user">
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text"> <i class="fa-solid fa-lock"></i> </i>&nbsp;Contraseña: </span>
+								<input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="contrasena" name="contrasena">
+							</div>
+							<div class="input-group mb-3 text-center">
+								<button type="button" class="btn btn-success" onclick="iniciarSesion();" id="btnEnviar">Enviar&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

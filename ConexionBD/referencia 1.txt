@@ -1,0 +1,24 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(document).on("click", "#upSubmit", function () {
+            var valor = "update";
+            var nombre = $('#nombre').val();
+            $('#Msg').html('<div class="loading"><img src="files/busy.gif" alt="loading" /> Procesando, por favor espere...</div>');
+            $.ajax({
+                url: "update.php",
+                type: "POST",
+                cache: false,
+                data: { valor: valor, nombre: nombre },
+                success: function (data) {
+                    if (data == 1) {
+                        $('#nombre').val('');
+                        $("#Msg").html("<div class='alert alert-success' role='alert'>Registrado.</div>");
+                    } else {
+                        $('#nombre').val('');
+                        $("#Msg").html("<div class='alert alert-danger' role='alert'>Error.</div>");
+                    }
+                }
+            });
+        });
+    });

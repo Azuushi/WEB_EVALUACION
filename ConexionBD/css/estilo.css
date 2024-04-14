@@ -1,0 +1,35 @@
+.menu-inicio{
+	background: black;
+}
+.menu-inicio a{
+	color:white;
+}
+
+.cuerpo{
+	background-color: #333333ff;
+}
+.fondo-blanco{
+	background-color: #ffffff;
+}
+
+.menu-inicio .nav-link:hover {
+	color: #800080; 
+  }
+
+        .fixed-bottom-right {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .bienvenido-container {
+            position: relative;
+        }
+        .bienvenido-texto {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-78%, -50%);
+            z-index: 1;
+            color: #ffff;
+       }

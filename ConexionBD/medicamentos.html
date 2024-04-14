@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Medicamentos</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/medicamentos.js"></script>
+    <script type="text/javascript" src="js/cerrarSesion.js"></script>
+    <script type="text/javascript" src="js/funcionesAjax.js"></script>
+</head>
+<body class="cuerpo">
+    <nav class="navbar navbar-expand-lg menu-inicio">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Regresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Medicamentos.html">Alta Medicamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista_2.html">Lista de Medicamentos</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col col-md-6 fondo-blanco" id="formulario">
+                <br>
+                <h2 class="text-center">Insertar Medicamento</h2>
+                <br>
+                <form id="formularioMedicamento" class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Nombre del Medicamento:</span>
+                        <input type="text" class="form-control" id="nombreMedicamento" name="nombreMedicamento" required>
+                        <div class="invalid-feedback">Por favor, ingrese el nombre del medicamento.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Principio Activo:</span>
+                        <input type="text" class="form-control" id="principioActivo" name="principioActivo" required>
+                        <div class="invalid-feedback">Por favor, ingrese el principio activo del medicamento.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Forma Farmacéutica:</span>
+                        <input type="text" class="form-control" id="formaFarmaceutica" name="formaFarmaceutica" required>
+                        <div class="invalid-feedback">Por favor, ingrese la forma farmacéutica del medicamento.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Precio Unitario:</span>
+                        <input type="number" class="form-control" id="precioUnitario" name="precioUnitario" required>
+                        <div class="invalid-feedback">Por favor, ingrese el precio unitario del medicamento.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Descripción:</span>
+                        <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+                        <div class="invalid-feedback">Por favor, ingresa una descripcion.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Contraindicaciones:</span>
+                        <textarea class="form-control" id="contraindicaciones" name="contraindicaciones" required></textarea>
+                        <div class="invalid-feedback">Por favor, ingresa una contraindicación.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Stock:</span>
+                        <input type="number" class="form-control" id="stock" name="stock" required>
+                        <div class="invalid-feedback">Por favor, ingrese el stock</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="submit" class="btn btn-success" value="Enviar" id="btnEnviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-12 center " id="cargando" style="display: none;">
+                <br>
+                <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="Cargando..."  style="max-width: 90px;">
+                <h1>Cargando...</h1>
+            </div>
+            <div class="col col-md-12 center " id="datos" style="display: none;">
+                <h1>¡DATOS ENVIADOS CORRECTAMENTE!</h1>
+            </div>
+    <div class="fixed-bottom-right">
+    <button type="button" class="btn btn-outline-warning" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

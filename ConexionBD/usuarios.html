@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/usuarios.js"></script>
+    <script type="text/javascript" src="js/cerrarSesion.js"></script>
+    <script type="text/javascript" src="js/funcionesAjax.js"></script>
+</head>
+<body class="cuerpo">
+    <nav class="navbar navbar-expand-lg menu-inicio">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Regresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuarios.html">Alta Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista_4.html">Lista de Usuarios</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col col-md-6 fondo-blanco" id="formulario">
+                <br>
+                <h2 class="text-center">Insertar Nuevo Usuario</h2>
+                <br>
+                <form id="formularioUsuario" class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Usuario:</span>
+                        <input type="text" class="form-control" id="usuario" name="usuario" required>
+                        <div class="invalid-feedback">Por favor, ingrese el nombre de usuario.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Contraseña:</span>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                        <div class="invalid-feedback">Por favor, ingrese la contraseña.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Nivel de Acceso:</span>
+                        <input type="number" class="form-control" id="nivel" name="nivel" required>
+                        <div class="invalid-feedback">Por favor, ingrese el nivel de acceso.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="submit" class="btn btn-success" value="Enviar" id="btnCrearUsuario">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-12 center " id="cargando" style="display: none;">
+        <br>
+        <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="Cargando..."  style="max-width: 90px;">
+        <h1>Cargando...</h1>
+    </div>
+    <div class="col col-md-12 center " id="datos" style="display: none;">
+        <h1>¡Usuario creado correctamente!</h1>
+    </div>
+    <div class="fixed-bottom-right">
+    <button type="button" class="btn btn-outline-warning" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Médicos</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/master.js"></script>
+    <script type="text/javascript" src="js/cerrarSesion.js"></script>
+    <script type="text/javascript" src="js/funcionesAjax.js"></script>
+</head>
+<body class="cuerpo">
+    <nav class="navbar navbar-expand-lg menu-inicio">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Regresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="medicos.html">Alta Medicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista.html">Lista de Medicos</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </nav>
+    <div>
+        <div class="container-fluid">
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col col-md-6 fondo-blanco" id="formulario">
+                <br>
+                <h2 class="text-center">Insertar Médico</h2>
+                <br>
+                <form class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"> <i class="fa-solid fa-user"> </i>  Nombre: </span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="name" name="nombre" required>
+                        <div class="invalid-feedback">Por favor, ingrese un nombre.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"> <i class="fa-solid fa-user"> </i>  Primer Apellido: </span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="primerApellido" name="primerApellido" required>
+                        <div class="invalid-feedback">Por favor, ingrese un primer apellido.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"> <i class="fa-solid fa-user"> </i>  Segundo Apellido: </span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="segundoApellido" name="segundoApellido" required>
+                        <div class="invalid-feedback">Por favor, ingrese un segundo apellido.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"> <i class="fa-solid fa-user"> </i>  Cedula: </span>
+                        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="cedula" name="cedula" required>
+                        <div class="invalid-feedback">Por favor, ingrese un número de cédula válido.</div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="submit" class="btn btn-success" value="Enviar" id="btnEnviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+	<div id="carga" style="display:none;">
+	    <h1>Cargando...</h1>
+	</div>
+
+    <!-- Mensaje de éxito -->
+    <div id="exito" style="display:none;">
+        <h1>Datos enviados exitosamente</h1>
+    </div>
+    <div class="fixed-bottom-right">
+    <button type="button" class="btn btn-outline-warning" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

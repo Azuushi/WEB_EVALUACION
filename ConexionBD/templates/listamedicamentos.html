@@ -1,0 +1,28 @@
+<script type="text/x-handlebars-template" id="medicamentos">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Principio Activo</th>
+                <th scope="col">Forma Farmacéutica</th>
+                <th scope="col">Precio Unitario</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Contraindicaciones</th>
+                <th scope="col">Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{nombreMedicamento}}</td>
+                <td>{{principioActivo}}</td>
+                <td>{{formaFarmaceutica}}</td>
+                <td>{{precioUnitario}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{contraindicaciones}}</td>
+                <td>{{stock}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</script>

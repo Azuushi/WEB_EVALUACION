@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Primera Página</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/front.js"></script>
+    <script type="text/javascript" src="js/pacientes.js"></script>
+    <script type="text/javascript" src="js/cerrarSesion.js"></script>
+    <script type="text/javascript" src="js/funcionesAjax.js"></script>
+</head>
+<body class="cuerpo">
+    <nav class="navbar navbar-expand-lg menu-inicio">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Regresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pacientes.html">Alta Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista_3.html">Lista de Pacientes</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </nav>
+    <div id="listaPacientes"></div>
+    <div class="fixed-bottom-right">
+    <button type="button" class="btn btn-outline-warning" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

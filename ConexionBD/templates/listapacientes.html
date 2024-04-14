@@ -1,0 +1,38 @@
+<script type="text/x-handlebars-template" id="pacientes">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Nombre</th>
+				<th scope="col">Primer Apellido</th>
+				<th scope="col">Segundo Apellido</th>
+				<th scope="col">Peso</th>
+				<th scope="col">Altura</th>
+				<th scope="col">Fecha de Nacimiento</th>
+				<th scope="col">Género</th>
+				<th scope="col">Dirección</th>
+				<th scope="col">Número de Teléfono</th>
+				<th scope="col">Correo</th>
+				<th scope="col">Tipo de Sangre</th>
+				<th scope="col">Sexo</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each data}}
+				<tr>
+					<td>{{nombre}}</td>
+					<td>{{primer_apellido}}</td>
+					<td>{{segundo_apellido}}</td>
+					<td>{{peso}}</td>
+					<td>{{altura}}</td>
+					<td>{{fecha_nacimiento}}</td>
+					<td>{{genero}}</td>
+					<td>{{direccion}}</td>
+					<td>{{num_telefono}}</td>
+					<td>{{correo}}</td>
+					<td>{{tipo_sangre}}</td>
+					<td>{{sexo}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</script>
